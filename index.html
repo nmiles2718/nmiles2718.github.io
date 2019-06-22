@@ -114,10 +114,10 @@
 
 									<h3>Current Status</h3>
 									<p class="about" style="margin:0;">
-									I am currently employed as an Research and Instrument Analyst (RIA) II at the Space Telescope Science Institute (STScI). RIAs are a part of the Technical Staff at STScI and we provide mission support for HST, JWST and WFIRST. As an RIA at STScI, my time is divided into two main areas: a functional area and a science area. 
+									I am currently employed as an Research and Instrument Analyst (RIA) II at the Space Telescope Science Institute (STScI). RIAs are a part of the Technical Staff at STScI and we provide mission support for HST, JWST and WFIRST. As an RIA at STScI, my time is divided into two main areas: functional time and science time.
 									</p>
 									<p class="about" style="margin:0;">
-									For my functional work, I am a member of the Advanced Camera for Surveys (ACS) Instrument Team. On ACS, I several many purposes. I am the PI of the Post-Flash Calibration program where I developed a novel technique for creating the post-flash reference file free of dark current artifacts (see ACS ISR 2018-02). I help build and develop analysis pipelines to designed to be easily maintained. I am the co-maintainer of the <code>acstools</code> python package and the author of the <code>acszpt</code> module. 
+									For my functional time, I am a member of the Advanced Camera for Surveys (ACS) Instrument Team. As a member of the ACS Team, I have a variety of different projects and serve in many different roles. Currently, I am the PI of the Post-Flash Calibration program where I recently developed a novel technique for creating the post-flash reference file free of dark current artifacts (see ACS ISR 2018-02). More generally, I help build and develop analysis pipelines used to routinely monitor the health of the ACS/WFC CCD's. But I am also currently a co-maintainer of the <code>acstools</code> python package where I contributed the <code>acszpt</code> module.
 									</p>
 									<p class="about" style="margin:0;">
 									For my science work, I apply to work on projects requesting data analysis support through the Technical Staff Research Committee (TSRC). Every six months, the TSRC solicits the science staff at STScI for projects they require help on. First, The science staff will develop a work plan and a desired set of skills for their project. Next, the TSRC advertises these projects to the technical staff and we apply to work on the projects we are most interested in. So far I have been fortunate enough to work on two exciting projects studying completely different areas of astronomy. 
@@ -131,13 +131,31 @@
 									<h3>Research</h3>
 									<h4> HST FUV/NUV Photometry of the Putative Binary Companion to the SN 1993J Progenitor </h4>
 									<span> <b>Principle Investigator</b>: Dr. Ori Fox </span>
-									<p>The goal of this project was to quanitfy the FUV/NUV excess of the putative binary companion to the SN1993J progenitor star. NUV observations were taken using the F218W, F275W, and F336W filters on WFC3/UVIS. While the FUV observations were taken with the F140LP filter on ACS/SBC. My job was to reduce an analyzed the observations to generate photometry catalogs for SN1993J and its neighboring sources.  </p>
-									
+									<p>The goal of this project was to quanitfy the FUV/NUV excess of the putative binary companion to the
+										SN1993J progenitor star. NUV observations were taken using the F218W, F275W, and F336W filters on WFC3/UVIS.
+										While the FUV observations were taken with the F140LP filter on ACS/SBC. My job was to reduce an analyzed the
+										observations to generate photometry catalogs for the SN1993J+companion object and its neighboring sources.
+										I helped write a photometry pipeline to isolate candidate PSF stars, build the psf, and then fit the psf
+										to SN1993J+companion object and its neighboring sources to extract their magnitudes. To learn more, check out the
+										poster we presented at 232nd AAS:
+									<br>
+
+										<a class="button" href="./miles_AAS_232_FINAL.pdf"> AAS Poster</a>
+									</p>
 									<h4> Geophysics with the Hubble Space Telescope</h4>
 									<span> <b> Co-Principle Investigators</b> Dr. Susana Deustua and Dr. Gonzalo Tancredi</span>
-									<p>
-
+									<p> As part of routine monitoring progras, each instrument team takes ~daily dark exposures
+										during occultation (i.e. when HST can't do much of anything because of the Sun). The dark
+										exposures contain a wealth of information about galactic cosmic rays and the goal of this
+										program is to study the geomagnetic field by analyzing the galactic cosmic rays. I wrote a
+										data analysis pipeline designed to progammatically download, process, and analyze one month
+										chunks of dark exposures. So far we have analyzed more than 75,000 images from 5 different
+										HST CCD imagers generating statistics on more than 1.4 billion cosmic rays. To learn more,
+										check out the poster we presented at the 100th AGU:
+										<br>
+										<a class="button" href="https://agu2018fallmeeting-agu.ipostersessions.com/default.aspx?s=2D-51-0B-BB-9D-E4-AF-FE-12-D2-4B-82-5C-20-75-7D"> AGU Poster</a>
 									</p>
+
 								</div>
 							</section>
 
@@ -151,7 +169,9 @@
 											<a href="#animations" class="image"><img src="images/saturn_transit1.gif" alt="" /></a>
 											<div class="inner">
 												<h4>Animations with <code>matplotlib</code></h4>
-												<p>A lot of my early work focused on visual analysis. To facilitate this, I wrote a python tool to create MP4s and GIFs using data in a user supplied directory. </p>
+												<p>A lot of my early work focused on visual analysis. To facilitate this, I wrote a python based command line tool to create MP4s
+													and GIFs using FITS data. An example of the output is seen on the left. This animation of Titan's transit across Saturn was
+													generated using ACS/SBC observations observed as part of the successful Cycle 16 GO proposal, <a href="http://www.stsci.edu/sites/www/home/hst/observing/program-information.html?id=11970">11970</a>, "HST Observations of Titan's Escaping Atmosphere in Transit and in Emission."  </p>
 												<a href="https://github.com/nmiles2718/animated_fits" class="icon fa-github"> animated_fits</a>
 											</div>
 										</article>
@@ -167,7 +187,7 @@
 											<a href="#MachineLearning" class="image"><img src="images/wfpc2_size_vs_shape.png" alt="" /></a>
 											<div class="inner">
 												<h4>Machine Learning</h4>
-												<p>A toy example demonstrating how to build a binary classifier using the KNearestNeighbors method to identify cosmic rays. </p>
+												<p>I am currently working on an example demonstrating how to build a binary classifier using the KNearestNeighbors method that is capable of differentiating between cosmic rays and stars. I'm using a sample dataset of ACS/WFC observations of NGC104 to generate a catalog of stars and then statistics generated from my research to generate a catalog of cosmic rays. Once the notebook is finished, I'll add a link to the repo! </p>
 											</div>
 										</article>
 									</div>
@@ -541,7 +561,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
